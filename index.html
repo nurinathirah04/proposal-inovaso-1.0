@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovation Proposal 1.0 — IDEA-BM Trialogikal</title>
+<style>
+:root{
+  --navy:#15344a; --green:#15856d; --green2:#e3f5ef; --yellow:#ffd75f;
+  --blue:#eaf3ff; --purple:#f2ecff; --orange:#fff1df; --pink:#ffe9ee;
+  --ink:#263844; --muted:#6e7e87; --line:#dce7e3; --bg:#eef4f2; --white:#fff;
+  --shadow:0 12px 34px rgba(21,52,74,.08)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.55}
+a{color:inherit}
+.app{max-width:1280px;margin:22px auto;background:var(--white);border-radius:26px;overflow:hidden;box-shadow:0 16px 50px rgba(21,52,74,.12)}
+header{padding:28px 32px;background:linear-gradient(135deg,#133a55,#168a70);color:white;display:flex;justify-content:space-between;gap:24px;align-items:center}
+.brand{display:flex;align-items:center;gap:14px}.logo{font-weight:950;font-size:32px;letter-spacing:.4px}.logo span{color:var(--yellow)}
+.kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;opacity:.88}.subtitle{font-size:14px;opacity:.92;margin-top:5px}
+.header-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.headbtn{background:#ffffff16;border:1px solid #ffffff35;color:white;padding:10px 13px;border-radius:12px;font-weight:800;cursor:pointer}
+.nav{display:flex;gap:6px;padding:10px 18px;background:#f7fbfa;border-bottom:1px solid var(--line);overflow:auto;position:sticky;top:0;z-index:10}
+.nav button{border:0;background:transparent;padding:10px 13px;border-radius:10px;font-weight:850;color:#60727b;white-space:nowrap;cursor:pointer}.nav button.active,.nav button:hover{background:var(--green2);color:var(--green)}
+.main{display:grid;grid-template-columns:250px 1fr;min-height:850px}
+aside{background:#f5faf8;border-right:1px solid var(--line);padding:20px;position:sticky;top:56px;height:calc(100vh - 78px);overflow:auto}
+.side-title{font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:#77908a;margin:2px 0 13px}
+.side-link{display:flex;gap:10px;align-items:flex-start;padding:11px;border-radius:13px;margin:5px 0;cursor:pointer;color:#49616b}.side-link:hover{background:#edf6f3}.side-link.active{background:var(--green2);color:var(--green);font-weight:900}
+.num{width:28px;height:28px;border-radius:9px;background:#e0ebe7;display:grid;place-items:center;font-weight:900;font-size:12px;flex:none}.active .num{background:var(--green);color:#fff}
+.side-note{margin-top:16px;padding:14px;border-radius:14px;background:white;border:1px solid var(--line);font-size:12px;color:#556872}
+.content{padding:34px}.section{scroll-margin-top:80px;margin-bottom:54px}.cover{background:linear-gradient(135deg,#f4fbf8,#ffffff);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--shadow)}
+.badge{display:inline-block;background:var(--green2);color:var(--green);padding:7px 10px;border-radius:20px;font-size:11px;font-weight:900;letter-spacing:.02em}
+h1{font-size:42px;line-height:1.08;color:var(--navy);margin:12px 0 8px}h2{font-size:26px;color:var(--navy);margin:0 0 9px}h3{color:var(--navy);margin:0 0 7px}.lead{font-size:17px;color:#526872;max-width:860px}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}.meta .box{padding:15px;border-radius:15px;background:#fff;border:1px solid var(--line)}.meta b{display:block;color:var(--green);font-size:12px;text-transform:uppercase;letter-spacing:.06em}.meta span{font-weight:850;color:var(--navy);font-size:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 5px 18px rgba(21,52,74,.05);margin-top:15px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{border:1px solid var(--line);border-radius:15px;padding:16px;background:#fff}.tile.green{background:var(--green2);border-color:#b9dfd2}.tile.blue{background:var(--blue)}.tile.orange{background:var(--orange)}.tile.purple{background:var(--purple)}.tile.pink{background:var(--pink)}
+.tile b{display:block;color:var(--navy);margin-bottom:5px}.muted{color:var(--muted)}
+.quote{border-left:5px solid var(--green);background:#f6fbf9;padding:16px 18px;border-radius:0 14px 14px 0;margin-top:14px;font-weight:750;color:#34514a}
+.flow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:15px}.flow .node{padding:11px 14px;border-radius:12px;background:var(--navy);color:#fff;font-size:12px;font-weight:850}.flow .arrow{font-weight:950;color:var(--green);font-size:20px}
+table{border-collapse:collapse;width:100%}th,td{padding:11px;border-bottom:1px solid var(--line);vertical-align:top;font-size:13px;text-align:left}th{background:#f7faf9;color:var(--navy)}
+.ped{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.ped .tile{min-height:145px}
+.timeline{position:relative;margin:10px 0 0;padding-left:27px}.timeline:before{content:"";position:absolute;left:10px;top:3px;bottom:5px;width:2px;background:#d5e3de}.stage{position:relative;padding:0 0 20px}.dot{position:absolute;left:-23px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--green)}
+.model-card{display:grid;grid-template-columns:52px 1fr;gap:15px;align-items:start;padding:16px;border:1px solid var(--line);border-radius:16px;background:#fff}.model-num{width:42px;height:42px;border-radius:13px;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:900}.model-card small{color:var(--muted)}
+.demo-shell{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:white;box-shadow:var(--shadow)}
+.demo-head{padding:18px 20px;background:linear-gradient(135deg,#143c58,#178a71);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:14px}.demo-head .mini{font-size:12px;opacity:.88}.demo-body{display:grid;grid-template-columns:210px 1fr;min-height:650px}.demo-side{background:#f6faf8;border-right:1px solid var(--line);padding:14px}.dstep{padding:10px;border-radius:11px;font-size:12px;font-weight:850;color:#5d7077;margin:4px 0;cursor:pointer}.dstep.active{background:var(--green2);color:var(--green)}.demo-content{padding:22px}.dsection{display:none}.dsection.active{display:block}.dbadge{display:inline-block;background:var(--green2);color:var(--green);padding:6px 9px;border-radius:16px;font-size:10px;font-weight:900}.dtitle{font-size:27px;color:var(--navy);margin:9px 0 4px}.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:13px}.choice{border:2px solid var(--line);border-radius:13px;background:#fff;padding:14px;text-align:left;cursor:pointer}.choice:hover{border-color:#79bfae}.choice.selected{border-color:var(--green);background:var(--green2)}.choice b{display:block;color:var(--navy)}
+input,textarea,select{width:100%;padding:11px 12px;border:1px solid #cddcd7;border-radius:10px;margin-top:6px;font:inherit}textarea{min-height:80px;resize:vertical}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.formrow{margin-top:11px;font-size:12px;font-weight:800;color:#48616b}.dbtn{border:0;border-radius:10px;padding:10px 14px;font-weight:900;cursor:pointer}.primary{background:var(--green);color:white}.secondary{background:#edf3f1;color:#31564d}.feedback{display:none;margin-top:10px;padding:10px 12px;border-radius:10px;font-size:12px;font-weight:800}.feedback.show{display:block;background:#e8f7ef;color:#177052}.feedback.warn{display:block;background:#fff2d6;color:#8a6509}
+.cta{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.cta button{border:0;border-radius:12px;padding:12px 16px;font-weight:900;cursor:pointer}.hero{font-size:14px;color:#576d76}
+.score-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.score{padding:16px;background:#f7faf9;border:1px solid var(--line);border-radius:14px}.score strong{display:block;font-size:26px;color:var(--green)}.score span{font-size:11px;color:var(--muted)}
+.footer{padding:14px 22px;background:#f7faf9;color:#7b888f;text-align:center;font-size:11px}
+@media(max-width:980px){.main{grid-template-columns:1fr}aside{position:relative;top:auto;height:auto;border-right:0;border-bottom:1px solid var(--line)}.meta,.grid4,.score-row{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}.ped{grid-template-columns:1fr}.demo-body{grid-template-columns:1fr}.demo-side{border-right:0;border-bottom:1px solid var(--line);display:flex;gap:5px;overflow:auto}.dstep{white-space:nowrap}.content{padding:22px}}
+@media(max-width:640px){.meta,.grid2,.choice-grid,.formgrid,.score-row{grid-template-columns:1fr}header{padding:22px}.header-actions{display:none}h1{font-size:32px}.content{padding:18px}}
+@media print{body{background:#fff}.app{margin:0;max-width:none;box-shadow:none}.nav,aside,.header-actions,.demo-side,.cta{display:none!important}.main{display:block}.content{padding:20px}.section{page-break-inside:avoid;margin-bottom:30px}.demo-body{grid-template-columns:1fr}.demo-shell{box-shadow:none}}
+</style>
+</head>
+<body>
+<div class="app" id="top">
+<header>
+  <div>
+    <div class="kicker">Innovation Proposal 1.0</div>
+    <div class="brand"><div class="logo">IDEA-<span>BM</span> Trialogikal</div></div>
+    <div class="subtitle">Digital Learning Object untuk membantu murid Bahasa Melayu membina, menguji dan mengembangkan idea bersama.</div>
+  </div>
+  <div class="header-actions">
+    <button class="headbtn" onclick="window.print()">🖨 Cetak Proposal</button>
+    <button class="headbtn" onclick="presentMode()">⛶ Mod Pembentangan</button>
+  </div>
+</header>
+<nav class="nav" id="nav">
+  <button class="active" onclick="go('cover')">1. Ringkasan</button>
+  <button onclick="go('problem')">2. Masalah</button>
+  <button onclick="go('innovation')">3. Inovasi</button>
+  <button onclick="go('trialogikal')">4. Trialogikal</button>
+  <button onclick="go('pedagogi')">5. Pedagogi</button>
+  <button onclick="go('demo')">6. Demo DLO</button>
+  <button onclick="go('impact')">7. Impak</button>
+</nav>
+
+<div class="main">
+<aside>
+  <div class="side-title">Innovation Proposal</div>
+  <div class="side-link active" onclick="go('cover')" id="sl-cover"><div class="num">1</div><div>Ringkasan Proposal</div></div>
+  <div class="side-link" onclick="go('problem')" id="sl-problem"><div class="num">2</div><div>Masalah & Keperluan</div></div>
+  <div class="side-link" onclick="go('innovation')" id="sl-innovation"><div class="num">3</div><div>Cadangan Inovasi</div></div>
+  <div class="side-link" onclick="go('trialogikal')" id="sl-trialogikal"><div class="num">4</div><div>Model Trialogikal</div></div>
+  <div class="side-link" onclick="go('pedagogi')" id="sl-pedagogi"><div class="num">5</div><div>Justifikasi Pedagogi</div></div>
+  <div class="side-link" onclick="go('demo')" id="sl-demo"><div class="num">6</div><div>Demo DLO</div></div>
+  <div class="side-link" onclick="go('impact')" id="sl-impact"><div class="num">7</div><div>Impak & Kesimpulan</div></div>
+  <div class="side-note"><b>Objek pengetahuan bersama</b><br>📘 BM Digital Innovation Blueprint<br><br>Artifak dibina, dikongsi, dinilai, ditransformasi dan digunakan semula.</div>
+</aside>
+
+<main class="content">
+
+<section class="section cover" id="cover">
+  <span class="badge">VERSI 1.0 • CADANGAN KUMPULAN</span>
+  <h1>IDEA-BM Trialogikal</h1>
+  <div class="lead"><b>Daripada masalah → kepada idea → kepada artifak pengetahuan bersama.</b></div>
+  <p class="hero">Sebuah DLO interaktif yang memandu murid Bahasa Melayu mengenal pasti masalah, menjana idea, membina penyelesaian, mendapatkan maklum balas dan menambah baik artifak secara kolaboratif.</p>
+  <div class="meta">
+    <div class="box"><b>Bidang</b><span>Bahasa Melayu</span></div>
+    <div class="box"><b>Bentuk</b><span>Digital Learning Object</span></div>
+    <div class="box"><b>Pengguna</b><span>Murid + Guru</span></div>
+    <div class="box"><b>Mod</b><span>Kolaboratif / Individu</span></div>
+  </div>
+  <div class="quote">“Bukan sekadar membantu murid mencari jawapan; IDEA-BM membantu murid membina, menguji dan mengembangkan idea bersama.”</div>
+  <div class="cta"><button class="primary" onclick="go('demo')">▶ Cuba Demo DLO</button><button class="secondary" onclick="go('trialogikal')">Lihat Model Trialogikal</button></div>
+</section>
+
+<section class="section" id="problem">
+  <span class="badge">2. MASALAH & KEPERLUAN</span><h2>Mengapa inovasi ini diperlukan?</h2>
+  <div class="grid2">
+    <div class="card"><h3>Masalah utama</h3><p><b>Murid sukar menjana dan menghuraikan idea</b> dalam tugasan Bahasa Melayu walaupun mempunyai pengetahuan asas tentang topik.</p>
+      <div class="grid2"><div class="tile pink"><b>“Tak tahu nak tulis apa.”</b><small>Kesukaran memulakan idea.</small></div><div class="tile orange"><b>Idea terlalu umum</b><small>Kurang huraian dan contoh.</small></div></div>
+    </div>
+    <div class="card"><h3>Keperluan sebenar</h3><div class="timeline">
+      <div class="stage"><span class="dot"></span><b>Bimbingan berperingkat</b><br><small class="muted">Murid memerlukan langkah kecil, bukan jawapan terus.</small></div>
+      <div class="stage"><span class="dot"></span><b>Ruang kolaborasi</b><br><small class="muted">Idea perlu dibincang dan diperbaiki bersama.</small></div>
+      <div class="stage"><span class="dot"></span><b>Maklum balas</b><br><small class="muted">Murid perlu tahu bagaimana untuk memperbaiki idea.</small></div>
+      <div class="stage"><span class="dot"></span><b>Guna semula</b><br><small class="muted">Hasil pembelajaran wajar menjadi sumber untuk topik lain.</small></div>
+    </div></div>
+  </div>
+  <div class="card"><h3>Bagaimana idea asal kumpulan diterjemahkan?</h3><div class="flow">
+    <div class="node">Problem Hunt</div><div class="arrow">→</div><div class="node">Need or Want</div><div class="arrow">→</div><div class="node">Computational Thinking</div><div class="arrow">→</div><div class="node">Crazy 4</div><div class="arrow">→</div><div class="node">Blueprint</div><div class="arrow">→</div><div class="node">Pitch + Reflection</div>
+  </div></div>
+</section>
+
+<section class="section" id="innovation">
+  <span class="badge">3. CADANGAN INOVASI</span><h2>Apakah IDEA-BM?</h2>
+  <p class="lead">IDEA-BM ialah DLO yang menukar proses penjanaan idea kepada <b>alur pembelajaran interaktif</b> dan menghasilkan satu objek pengetahuan bersama: <b>BM Digital Innovation Blueprint</b>.</p>
+  <div class="grid3">
+    <div class="tile green"><h3>🔎 Kenal pasti</h3><p>Problem Hunt dan Need or Want membantu murid memahami tujuan sebenar.</p></div>
+    <div class="tile blue"><h3>🧠 Bina</h3><p>Computational Thinking dan Crazy 4 membantu murid menghasilkan beberapa pilihan.</p></div>
+    <div class="tile orange"><h3>📝 Transformasi</h3><p>Blueprint, peer review dan refleksi mengubah idea awal kepada produk yang lebih baik.</p></div>
+  </div>
+  <div class="card"><h3>Aliran DLO</h3><div class="flow"><div class="node">① Problem Hunt</div><div class="arrow">→</div><div class="node">② Need / Want</div><div class="arrow">→</div><div class="node">③ CT Canvas</div><div class="arrow">→</div><div class="node">④ Crazy 4</div><div class="arrow">→</div><div class="node">⑤ Blueprint</div><div class="arrow">→</div><div class="node">⑥ Pitch</div><div class="arrow">→</div><div class="node">⑦ Exit Ticket</div></div></div>
+  <div class="card"><h3>Objek bersama: BM Digital Innovation Blueprint</h3><div class="grid4">
+    <div class="tile"><b>Masalah</b><small>Apakah masalah sebenar?</small></div><div class="tile"><b>Pengguna</b><small>Siapa yang memerlukan penyelesaian?</small></div><div class="tile"><b>Idea inovasi</b><small>Apakah idea terbaik?</small></div><div class="tile"><b>Fungsi digital</b><small>Bagaimana teknologi menyokongnya?</small></div>
+  </div></div>
+</section>
+
+<section class="section" id="trialogikal">
+  <span class="badge">4. MODEL PEMBELAJARAN TRIALOGIKAL</span><h2>Bagaimana model diterapkan?</h2>
+  <p class="lead">Enam fasa digunakan sebagai <b>tulang belakang reka bentuk</b>. Aktiviti Minggu 5 dipetakan kepada proses pembinaan dan transformasi artifak bersama.</p>
+  <div class="grid2">
+    <div class="model-card"><div class="model-num">1</div><div><h3>Explicating Real Purpose and Need</h3><small>Problem Hunt + Need or Want</small><p>Murid menjelaskan masalah sebenar, pengguna dan keperluan sebelum memilih penyelesaian.</p></div></div>
+    <div class="model-card"><div class="model-num">2</div><div><h3>Framing</h3><small>Computational Thinking Canvas</small><p>Masalah dipecahkan kepada komponen, skop dan kriteria supaya kumpulan tahu perkara yang perlu dibina.</p></div></div>
+    <div class="model-card"><div class="model-num">3</div><div><h3>Drafting and Versioning</h3><small>Crazy 4 + Blueprint</small><p>Idea ahli digabungkan menjadi draf artifak dan direkodkan sebagai versi yang boleh diubah.</p></div></div>
+    <div class="model-card"><div class="model-num">4</div><div><h3>Examining and Reflecting</h3><small>Innovation Pitch + Exit Ticket</small><p>Artifak diuji oleh rakan, menerima maklum balas dan diperiksa melalui refleksi.</p></div></div>
+    <div class="model-card"><div class="model-num">5</div><div><h3>Finalising and Specifying</h3><small>Versi akhir Blueprint</small><p>Kumpulan memilih cadangan terbaik, memperincikan fungsi dan menghasilkan spesifikasi produk.</p></div></div>
+    <div class="model-card"><div class="model-num">6</div><div><h3>Reusing</h3><small>Reuse Gallery</small><p>Artifak disimpan dan diadaptasi untuk topik atau situasi pembelajaran yang baharu.</p></div></div>
+  </div>
+  <div class="quote"><b>Prinsip teras:</b> pembelajaran tidak berakhir pada jawapan individu. Pengetahuan berkembang melalui sumbangan individu, dialog, pembinaan artifak bersama, refleksi, transformasi dan penggunaan semula.</div>
+</section>
+
+<section class="section" id="pedagogi">
+  <span class="badge">5. JUSTIFIKASI PEDAGOGI</span><h2>Mengapa reka bentuk ini sesuai untuk pembelajaran?</h2>
+  <div class="ped">
+    <div class="tile green"><h3>🎓 Scaffolding</h3><p>Tugas kompleks dipecahkan kepada langkah kecil supaya murid bergerak daripada idea asas kepada idea yang dihuraikan.</p></div>
+    <div class="tile blue"><h3>👥 Collaborative Learning</h3><p>Murid berkongsi idea, memberi maklum balas dan membuat keputusan bersama melalui objek digital yang dikongsi.</p></div>
+    <div class="tile orange"><h3>🧩 Problem-Based Learning</h3><p>Proses bermula dengan masalah autentik murid dan berakhir dengan cadangan penyelesaian yang boleh digunakan.</p></div>
+    <div class="tile purple"><h3>🔄 Assessment for Learning</h3><p>Peer review, self-check dan refleksi memberi peluang untuk mengenal pasti kelemahan dan memperbaiki produk.</p></div>
+    <div class="tile pink"><h3>🌱 Authentic Learning</h3><p>Murid menghasilkan artifak yang mempunyai kegunaan dalam situasi pembelajaran sebenar, bukan sekadar jawapan untuk dihantar.</p></div>
+    <div class="tile"><h3>♻️ Reusability</h3><p>Artifak boleh disimpan, diadaptasi dan digunakan semula untuk topik lain. Pembelajaran mempunyai kesinambungan.</p></div>
+  </div>
+  <div class="card"><h3>Peranan guru</h3><table><tr><th>Peranan</th><th>Fungsi</th></tr><tr><td><b>Fasilitator</b></td><td>Membimbing proses pemikiran tanpa mengambil alih pembinaan idea.</td></tr><tr><td><b>Moderator</b></td><td>Memastikan semua ahli terlibat dan dialog kekal fokus.</td></tr><tr><td><b>Pemberi maklum balas</b></td><td>Membantu kumpulan menilai dan memperincikan artifak.</td></tr><tr><td><b>Kurator</b></td><td>Mengenal pasti artifak yang bernilai untuk dikongsi atau digunakan semula.</td></tr></table></div>
+</section>
+
+<section class="section" id="demo">
+  <span class="badge">6. PROTOTAIP DLO</span><h2>Demo interaktif: IDEA-BM</h2>
+  <p class="lead">Bahagian ini menunjukkan bagaimana proposal diterjemahkan kepada pengalaman pembelajaran digital. Klik langkah di sebelah kiri.</p>
+  <div class="demo-shell">
+    <div class="demo-head"><div><b>IDEA-BM Trialogikal</b><div class="mini">Murid • Kumpulan • Artifak Bersama</div></div><button class="headbtn" onclick="alert('Dalam versi sebenar, pautan perkongsian/QR boleh diletakkan di sini.')">🔗 Kongsi</button></div>
+    <div class="demo-body">
+      <div class="demo-side">
+        <div class="dstep active" onclick="dgo(1)" id="ds1">01 · Problem Hunt</div>
+        <div class="dstep" onclick="dgo(2)" id="ds2">02 · Need / Want</div>
+        <div class="dstep" onclick="dgo(3)" id="ds3">03 · CT Canvas</div>
+        <div class="dstep" onclick="dgo(4)" id="ds4">04 · Crazy 4</div>
+        <div class="dstep" onclick="dgo(5)" id="ds5">05 · Blueprint</div>
+        <div class="dstep" onclick="dgo(6)" id="ds6">06 · Pitch</div>
+        <div class="dstep" onclick="dgo(7)" id="ds7">07 · Exit Ticket</div>
+      </div>
+      <div class="demo-content">
+        <div class="dsection active" id="d1"><span class="dbadge">LANGKAH 1</span><div class="dtitle">🔎 Problem Hunt</div><p class="muted">Pilih masalah yang benar-benar berkaitan dengan kesukaran penulisan.</p><div class="choice-grid"><button class="choice" onclick="choice(this,'df1',true)"><b>A. Sukar menjana idea</b><small>Murid tidak tahu isi yang sesuai.</small></button><button class="choice" onclick="choice(this,'df1',false)"><b>B. Tidak ada telefon</b><small>Bukan isu pedagogi utama.</small></button><button class="choice" onclick="choice(this,'df1',true)"><b>C. Sukar menghuraikan idea</b><small>Isi ada tetapi tidak berkembang.</small></button><button class="choice" onclick="choice(this,'df1',false)"><b>D. Tidak suka warna slide</b><small>Tidak menyelesaikan masalah pembelajaran.</small></button></div><div class="feedback" id="df1"></div></div>
+        <div class="dsection" id="d2"><span class="dbadge">LANGKAH 2</span><div class="dtitle">👥 Need or Want?</div><p class="muted">Bezakan keperluan pembelajaran dengan ciri tambahan.</p><div class="choice-grid"><button class="choice" onclick="choice(this,'df2',true)"><b>💡 Soalan pencetus</b><small>Apa? Mengapa? Bagaimana? Contoh?</small></button><button class="choice" onclick="choice(this,'df2',true)"><b>🧩 Langkah pembinaan idea</b><small>Scaffolding membantu murid.</small></button><button class="choice" onclick="choice(this,'df2',false)"><b>🎮 Gamifikasi sahaja</b><small>Boleh menyokong, tetapi bukan keperluan utama.</small></button><button class="choice" onclick="choice(this,'df2',false)"><b>📱 Telefon baharu</b><small>Peranti bukan penyelesaian pedagogi.</small></button></div><div class="feedback" id="df2"></div></div>
+        <div class="dsection" id="d3"><span class="dbadge">LANGKAH 3</span><div class="dtitle">🧠 Computational Thinking Canvas</div><div class="grid3"><div class="tile"><b>Decomposition</b><small>Masalah besar → submasalah.</small></div><div class="tile"><b>Pattern Recognition</b><small>Kenal pasti corak kesukaran murid.</small></div><div class="tile"><b>Abstraction</b><small>Fokus pada perkara penting.</small></div></div><div class="card" style="margin-top:12px"><b>Algoritma</b><div class="flow"><div class="node">Faham</div><div class="arrow">→</div><div class="node">Jana</div><div class="arrow">→</div><div class="node">Huraikan</div><div class="arrow">→</div><div class="node">Susun</div><div class="arrow">→</div><div class="node">Semak</div></div></div></div>
+        <div class="dsection" id="d4"><span class="dbadge">LANGKAH 4</span><div class="dtitle">💡 Crazy 4 — Jana Idea</div><p class="muted">Setiap ahli menyumbang sekurang-kurangnya satu idea.</p><div class="formgrid"><div class="formrow">Idea ahli A<input value="Soalan pencetus"></div><div class="formrow">Idea ahli B<input value="Drag & Drop"></div><div class="formrow">Idea ahli C<input value="Maklum balas segera"></div><div class="formrow">Idea ahli D<input value="Reuse Gallery"></div></div><div class="feedback show" style="display:block">✓ 4 idea dikumpulkan. Sekarang gabungkan menjadi satu objek bersama.</div></div>
+        <div class="dsection" id="d5"><span class="dbadge">LANGKAH 5</span><div class="dtitle">📝 Innovation Blueprint</div><div class="formgrid"><div class="formrow">Masalah<textarea>Murid sukar menjana dan menghuraikan idea.</textarea></div><div class="formrow">Pengguna<textarea>Murid Bahasa Melayu</textarea></div><div class="formrow">Idea inovasi<textarea>IDEA-BM Trialogikal</textarea></div><div class="formrow">Fungsi digital<textarea>Prompt • input • feedback • versioning • peer review • reuse</textarea></div></div><button class="dbtn primary" style="margin-top:12px" onclick="alert('Demo: versi Blueprint disimpan sebagai v0.2')">＋ Simpan Versi v0.2</button></div>
+        <div class="dsection" id="d6"><span class="dbadge">LANGKAH 6</span><div class="dtitle">🎤 Innovation Pitch</div><p class="muted">Bentangkan masalah, idea dan nilai penyelesaian dalam 60 saat.</p><textarea placeholder="Masalah kami ialah... Penyelesaian kami ialah... IDEA-BM membantu kerana..."></textarea><button class="dbtn secondary" style="margin-top:10px" onclick="alert('⏱️ Demo: 60 saat bermula!')">▶ Mula Timer</button><div class="card"><b>Peer Review</b><br><small class="muted">“Tambah pilihan topik supaya artifak boleh digunakan semula.”</small></div></div>
+        <div class="dsection" id="d7"><span class="dbadge">LANGKAH 7</span><div class="dtitle">🎯 Exit Ticket</div><p class="muted">Refleksi terhadap proses dan artifak.</p><div class="choice-grid"><button class="choice" onclick="choice(this,'df7',true)"><b>💡 Saya lebih tahu cara menjana idea.</b></button><button class="choice" onclick="choice(this,'df7',true)"><b>🧩 Saya tahu cara menghuraikan idea.</b></button><button class="choice" onclick="choice(this,'df7',true)"><b>👥 Saya belajar melalui idea rakan.</b></button><button class="choice" onclick="choice(this,'df7',true)"><b>♻️ Saya tahu idea boleh digunakan semula.</b></button></div><div class="feedback" id="df7"></div><div class="card"><b>Hasil akhir:</b> BM Digital Innovation Blueprint + refleksi kumpulan</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="impact">
+  <span class="badge">7. IMPAK & KESIMPULAN</span><h2>Nilai inovasi yang dijangkakan</h2>
+  <div class="score-row"><div class="score"><strong>✓</strong><span>Murid lebih yakin memulakan idea</span></div><div class="score"><strong>✓</strong><span>Idea lebih dihuraikan dan tersusun</span></div><div class="score"><strong>✓</strong><span>Kolaborasi berpusat pada artifak</span></div><div class="score"><strong>♻️</strong><span>Produk boleh dikongsi dan diguna semula</span></div></div>
+  <div class="grid2" style="margin-top:15px"><div class="card"><h3>Impak kepada murid</h3><p>Daripada menunggu contoh jawapan, murid membina idea sendiri, menguji idea melalui maklum balas dan menambah baik hasil secara berperingkat.</p></div><div class="card"><h3>Impak kepada guru</h3><p>Guru boleh mengenal pasti sama ada kesukaran murid berlaku pada peringkat menjana, menghuraikan, menyusun atau menyemak idea.</p></div></div>
+  <div class="card"><h3>Kesimpulan Proposal 1.0</h3><div class="quote">IDEA-BM Trialogikal menggabungkan aktiviti yang telah dirangka oleh kumpulan dengan DLO interaktif dan Model Pembelajaran Trialogikal. Fokus inovasi bukan pada teknologi semata-mata, tetapi pada bagaimana teknologi menyokong proses <b>membina dan mentransformasikan pengetahuan melalui artifak bersama</b>.</div><div class="cta"><button class="primary" onclick="go('demo')">▶ Kembali ke Demo</button><button class="secondary" onclick="window.print()">🖨 Cetak Proposal</button></div></div>
+</section>
+
+</main>
+</div>
+<div class="footer">IDEA-BM Trialogikal • Innovation Proposal 1.0 • Prototaip pembentangan interaktif</div>
+</div>
+
+<script>
+const sections=['cover','problem','innovation','trialogikal','pedagogi','demo','impact'];
+function go(id){
+  const el=document.getElementById(id); if(!el) return;
+  el.scrollIntoView({behavior:'smooth',block:'start'});
+  document.querySelectorAll('#nav button').forEach(b=>b.classList.remove('active'));
+  const idx=sections.indexOf(id); if(idx>=0) document.querySelectorAll('#nav button')[idx].classList.add('active');
+  document.querySelectorAll('.side-link').forEach(x=>x.classList.remove('active'));
+  const s=document.getElementById('sl-'+id); if(s) s.classList.add('active');
+}
+function presentMode(){
+  const root=document.documentElement;
+  if(!document.fullscreenElement){document.documentElement.requestFullscreen?.();}
+}
+function dgo(n){
+  document.querySelectorAll('.dsection').forEach(x=>x.classList.remove('active'));
+  document.getElementById('d'+n).classList.add('active');
+  document.querySelectorAll('.dstep').forEach(x=>x.classList.remove('active'));
+  document.getElementById('ds'+n).classList.add('active');
+}
+function choice(el,id,good){
+  el.parentElement.querySelectorAll('.choice').forEach(x=>x.classList.remove('selected'));
+  el.classList.add('selected');
+  const f=document.getElementById(id); f.className='feedback '+(good?'show':'warn');
+  f.textContent=good?'✓ Tepat. Pilihan ini menyokong tujuan pembelajaran.':'💡 Fikirkan semula: adakah pilihan ini benar-benar menyelesaikan masalah pembelajaran?';
+}
+</script>
+</body>
+</html>
